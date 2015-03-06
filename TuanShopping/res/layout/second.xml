@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/second"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 头部导航 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_actionbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_s"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/ll_img"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_yhsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dip"
+                android:text="优惠商家"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_qbsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dip"
+                android:text="全部商家"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 头部右边 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical" >
+
+            <include layout="@layout/top_right" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 子菜单选项 -->
+
+        <LinearLayout
+            android:id="@+id/layout_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_normal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="42.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_btn_text"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="全部分类"
+                android:textColor="#ff000000"
+                android:textSize="16.0sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="16.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="42.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_btn_text"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="3千米"
+                android:textColor="#ff000000"
+                android:textSize="16.0sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="16.0dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="42.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_btn_text"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="评价最高"
+                android:textColor="#ff000000"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_refresh_addr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:text="长沙市雨花区韶山南路-香樟路" />
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:paddingRight="20dip"
+                android:src="@drawable/ic_refresh" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_shangjialist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_refresh_addr" >
+
+            <ListView
+                android:id="@+id/lv_shangjia"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

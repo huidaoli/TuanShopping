@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dip"
+    android:orientation="vertical" 
+    android:background="@drawable/bottom_tab"   
+    android:gravity="center"
+    >
+    
+    <ImageView 
+        android:id="@+id/img_name"
+        android:layout_width="30dip"
+        android:layout_height="30dip"/>
+    <TextView 
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bottom_tab_text_color_selector"/>
+    
+
+</LinearLayout>

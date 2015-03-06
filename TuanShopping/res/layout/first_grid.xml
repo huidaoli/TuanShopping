@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dip"
+    android:background="@color/abs__bright_foreground_holo_dark" >
+    <GridView
+        android:id="@+id/gv_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:horizontalSpacing="2.5dip"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="2.5dip" />
+</LinearLayout>

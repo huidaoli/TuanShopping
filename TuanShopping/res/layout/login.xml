@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 登录界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:orientation="vertical"
+    android:background="@color/citylist_divider" >
+    
+<!-- 头部导航 -->
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/bg_actionbar"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_weight="0">
+          <ImageView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dip"
+              android:src="@drawable/abs__ic_ab_back_holo_dark"/>
+         <ImageButton android:id="@+id/ib_return"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="3dip"
+             android:background="@drawable/ic_action_home"
+             android:onClick="onReturnmine"/>
+         
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="18sp"
+             android:layout_marginLeft="4dip"
+             android:textColor="@android:color/white"
+            android:text="登录"/>
+         
+         <RelativeLayout android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center_vertical"
+             >
+              <ImageView android:id="@+id/ib_mines"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/widget_line"
+             android:layout_alignParentRight="true"
+            android:layout_marginRight="70dip"
+             />
+             <LinearLayout android:layout_width="70dip"
+                 android:layout_height="50dip"
+                android:gravity="center" 
+                android:layout_alignParentRight="true">
+                   <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:text="找回密码"
+                  />
+             </LinearLayout>
+            
+         </RelativeLayout>
+    </LinearLayout>
+    
+    <!-- 登录界面 -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        
+	        <LinearLayout android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="15dip"
+	            android:background="@color/bg_table_subtitle"
+	            android:orientation="vertical"
+	            android:gravity="center_horizontal">
+	        	<EditText android:id="@+id/et_username"
+	        	    android:layout_width="fill_parent"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_marginLeft="15dip"
+	        	    android:layout_marginRight="15dip"
+	        	    android:layout_marginTop="40dip"
+	        	    android:layout_gravity="center"
+	        	    android:hint="手机/邮箱/用户名"
+	        	    android:textColorHint="@color/abs__bright_foreground_disabled_holo_dark"
+	        	    android:background="@drawable/bg_edit_selected"
+	        	    />
+	        	
+	        	<EditText android:id="@+id/et_userpwd"
+	        	    android:layout_width="fill_parent"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_marginLeft="15dip"
+	        	    android:layout_marginRight="15dip"
+	        	    android:layout_marginTop="40dip"
+	        	    android:layout_marginBottom="20dip"
+	        	    android:layout_gravity="center"
+	        	    android:hint="密码"
+	        	    android:textColorHint="@color/abs__bright_foreground_disabled_holo_dark"
+	        	    android:password="true"
+	        	    android:background="@drawable/bg_edit_unselected"
+	        	    />
+	    	</LinearLayout>
+	    	
+	        <LinearLayout android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:layout_marginTop="10dip"
+	            android:gravity="center">
+	        <Button android:id="@+id/btn_login"
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"	           
+	            android:layout_marginLeft="15dip"
+	            android:layout_marginRight="15dip"	            
+	            android:background="@drawable/bg_actionbar"
+	            android:text="登录"
+	            android:textColor="@color/white"
+	            android:onClick="onLogin"
+	            android:clickable="true"
+	           />
+	         </LinearLayout>
+	        <RelativeLayout android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="15dip"
+	            android:layout_marginRight="15dip"
+	            android:layout_marginTop="10dip">
+	            <Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="免费注册"
+	                android:onClick="register"
+	                android:background="@null"
+	                android:textColor="@color/green"/>
+	            <Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="无账号快捷登录"
+	                android:background="@null"
+	                android:onClick="register"
+	                android:textColor="@color/green"
+	                android:layout_alignParentRight="true"/>
+	        </RelativeLayout>
+	        
+	</LinearLayout>    
+    <!-- 合作登录 -->
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_weight="0" 
+        android:background="@drawable/account_oauth_login_sliding_drawer_header"
+        android:gravity="center">
+	       <TextView android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="使用合作网站账号进行登录"/> 
+	</LinearLayout>
+        
+
+</LinearLayout>
